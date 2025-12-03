@@ -6,6 +6,7 @@ import { ThemeProvider } from "./components/theme/ThemeProvider";
 import { Button } from "./components/ui/button";
 import { Input } from "./components/ui/input";
 import { Toaster } from "./components/ui/sonner";
+import { Icon } from "@iconify/react";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       {/* <Button>Click me</Button> */}
       <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <ModeToggle />
-        <Button className="text-primary-3">Click me</Button>
+
         <Input />
         <div className="my-5">
           <GroupForm
@@ -27,7 +28,30 @@ function App() {
             type={"number"}
           />
         </div>
-        <Button onClick={() => toast("Event has been created.")}>click</Button>
+        <div className="flex items-center gap-5">
+          <Button onClick={() => toast("Event has been created.")}>
+            click
+          </Button>
+          <Button variant={"blueGoast"}>click</Button>
+          <Button variant={"warningGoast"}>click</Button>
+          <Button variant={"primaryGoast"}>click</Button>
+          <Button variant={"errorGoast"}>click</Button>
+          <Button variant={"successGoast"}>click</Button>
+          <Button variant={"purpleGoast"}>click</Button>
+          <Button variant={"blue"}>click</Button>
+          <Button variant={"warning"}>click</Button>
+          <Button>click</Button>
+          <Button variant={"error"}>click</Button>
+          <Button variant={"success"}>click</Button>
+          <Button variant={"purple"}>click</Button>
+          <Button variant={"neutral"}>click</Button>
+          <Icon
+            icon="material-symbols-light:10k-sharp"
+            width="24"
+            height="24"
+            className="text-primary-2"
+          />
+        </div>
       </ThemeProvider>
     </>
   );

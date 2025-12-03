@@ -1,15 +1,40 @@
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default:
+          "bg-primary hover:bg-primary-3 active:bg-primary-6 disable:bg-accent-8 text-white ",
+        neutral:
+          "bg-accent-17 hover:bg-accent-13 active:bg-accent-17 disable:bg-accent-7 text-white ",
+        primaryGoast:
+          "bg-primary-0 hover:bg-primary-1 active:bg-primary-2 disable:bg-accent-5 text-primary ",
+        blueGoast:
+          "bg-blue-0 hover:bg-blue-1 active:bg-blue-2 disable:bg-accent-6 text-blue-5 ",
+        warningGoast:
+          "bg-warning-0 hover:bg-warning-1 active:bg-warning-2 disable:bg-accent-5 text-warning-6 ",
+        errorGoast:
+          "bg-error-0 hover:bg-error-1 active:bg-error-2 disable:bg-accent-6 text-error-5 ",
+        purpleGoast:
+          "bg-pur-1 hover:bg-pur-2 active:bg-pur-3 disable:bg-accent-5 text-pur-6 ",
+        successGoast:
+          "bg-success-0 hover:bg-success-1 active:bg-success-2 disable:bg-accent-5 text-success-7 ",
+
+        blue: "bg-blue-5 hover:bg-blue-3 active:bg-blue-6 disable:bg-accent-7 text-white ",
+        warning:
+          "bg-warning-5 hover:bg-warning-3 active:bg-warning-6 disable:bg-accent-7 text-white ",
+        error:
+          "bg-error-5 hover:bg-error-3 active:bg-error-6 disable:bg-accent-7 text-white ",
+        purple:
+          "bg-pur-7 hover:bg-pur-4 active:bg-pur-7 disable:bg-accent-7 text-white ",
+        success:
+          "bg-success-6 hover:bg-success-4 active:bg-success-7 disable:bg-accent-7 text-white ",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
@@ -34,27 +59,25 @@ const buttonVariants = cva(
       size: "default",
     },
   }
-)
+);
 
-function Button({
-  className,
-  variant,
-  size,
-  asChild = false,
-  ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
-  }) {
-  const Comp = asChild ? Slot : "button"
+const Button = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentProps<"button"> &
+    VariantProps<typeof buttonVariants> & { asChild?: boolean }
+>(({ className, variant, size, asChild = false, ...props }, ref) => {
+  const Comp = asChild ? Slot : "button";
 
   return (
     <Comp
+      ref={ref} // ⚡ Forward ref here
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />
-  )
-}
+  );
+});
 
-export { Button, buttonVariants }
+Button.displayName = "Button";
+
+export { Button, buttonVariants };

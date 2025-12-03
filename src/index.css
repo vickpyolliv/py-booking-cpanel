@@ -98,6 +98,16 @@
   --pur-7: #623993;
   --pur-8: #452869;
 
+  --error-0: #ffe4e6;
+  --error-1: #ffa7ac;
+  --error-2: #ff7a83;
+  --error-3: #ff2345;
+  --error-4: #ff0002;
+  --error-5: #f00;
+  --error-6: #f00000;
+  --error-7: #c70000;
+  --error-8: #9c0000;
+
   --neutral-primary: #ffffff;
   --neutral-secondary: #f6f7f7;
   --neutral-teritary: #e6e7e6;
@@ -292,6 +302,16 @@
   --pur-2: #7e4bbc;
   --pur-1: #623993;
   --pur-0: #452869;
+
+  --error-8: #ffe4e6;
+  --error-7: #ffa7ac;
+  --error-6: #ff7a83;
+  --error-5: #ff2345;
+  --error-4: #ff0002;
+  --error-3: #f00;
+  --error-2: #f00000;
+  --error-1: #c70000;
+  --error-0: #9c0000;
 
   --neutral-primary: #000;
   --neutral-secondary: #000;
@@ -504,6 +524,16 @@
   --color-pur-6: var(--pur-6);
   --color-pur-7: var(--pur-7);
   --color-pur-8: var(--pur-8);
+
+  --color-error-0: var(--error-0);
+  --color-error-1: var(--error-1);
+  --color-error-2: var(--error-2);
+  --color-error-3: var(--error-3);
+  --color-error-4: var(--error-4);
+  --color-error-5: var(--error-5);
+  --color-error-6: var(--error-6);
+  --color-error-7: var(--error-7);
+  --color-error-8: var(--error-8);
 
   --color-neutral-primary: var(--neutral-primary);
   --color-neutral-secondary: var(--neutral-secondary);

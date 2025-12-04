@@ -13,6 +13,16 @@ const buttonVariants = cva(
           "bg-primary hover:bg-primary-3 active:bg-primary-6 disable:bg-accent-8 text-white ",
         neutral:
           "bg-accent-17 hover:bg-accent-13 active:bg-accent-17 disable:bg-accent-7 text-white ",
+        blue: "bg-blue-5 hover:bg-blue-3 active:bg-blue-6 disable:bg-accent-7 text-white ",
+        warning:
+          "bg-warning-5 hover:bg-warning-3 active:bg-warning-6 disable:bg-accent-7 text-white ",
+        error:
+          "bg-error-5 hover:bg-error-3 active:bg-error-6 disable:bg-accent-7 text-white ",
+        purple:
+          "bg-pur-7 hover:bg-pur-4 active:bg-pur-7 disable:bg-accent-7 text-white ",
+        success:
+          "bg-success-6 hover:bg-success-4 active:bg-success-7 disable:bg-accent-7 text-white ",
+
         primaryGoast:
           "bg-primary-0 hover:bg-primary-1 active:bg-primary-2 disable:bg-accent-5 text-primary ",
         blueGoast:
@@ -26,15 +36,21 @@ const buttonVariants = cva(
         successGoast:
           "bg-success-0 hover:bg-success-1 active:bg-success-2 disable:bg-accent-5 text-success-7 ",
 
-        blue: "bg-blue-5 hover:bg-blue-3 active:bg-blue-6 disable:bg-accent-7 text-white ",
-        warning:
-          "bg-warning-5 hover:bg-warning-3 active:bg-warning-6 disable:bg-accent-7 text-white ",
-        error:
-          "bg-error-5 hover:bg-error-3 active:bg-error-6 disable:bg-accent-7 text-white ",
-        purple:
-          "bg-pur-7 hover:bg-pur-4 active:bg-pur-7 disable:bg-accent-7 text-white ",
-        success:
-          "bg-success-6 hover:bg-success-4 active:bg-success-7 disable:bg-accent-7 text-white ",
+        primarySecondary:
+          "bg-white hover:bg-primary-1 active:bg-primary-2 disable:bg-accent-5 text-primary border-2 border-primary-active ",
+        neutralSecondary:
+          "bg-white hover:bg-primary-1 active:bg-primary-2 disable:bg-accent-5 text-primary border-2 border-primary-active",
+        blueSecondary:
+          "bg-white hover:bg-blue-1 active:bg-blue-2 disable:bg-accent-6 text-blue-5 border-2 ",
+        warningSecondary:
+          "bg-white hover:bg-warning-1 active:bg-warning-2 disable:bg-accent-5 text-warning-6 border-2 ",
+        errorSecondary:
+          "bg-white hover:bg-error-1 active:bg-error-2 disable:bg-accent-6 text-error-5 border-2 ",
+        purpleSecondary:
+          "bg-white hover:bg-pur-2 active:bg-pur-3 disable:bg-accent-5 text-pur-6 border-2 ",
+        successSecondary:
+          "bg-white hover:bg-success-1 active:bg-success-2 disable:bg-accent-5 text-success-7 border-2 ",
+
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:

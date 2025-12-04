@@ -28,7 +28,7 @@ function App() {
             type={"number"}
           />
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 flex-wrap">
           <Button onClick={() => toast("Event has been created.")}>
             click
           </Button>
@@ -45,6 +45,14 @@ function App() {
           <Button variant={"success"}>click</Button>
           <Button variant={"purple"}>click</Button>
           <Button variant={"neutral"}>click</Button>
+
+          <Button variant={"blueSecondary"}>click</Button>
+          <Button variant={"warningSecondary"}>click</Button>
+          <Button variant={"primarySecondary"}>click</Button>
+          <Button variant={"errorSecondary"}>click</Button>
+          <Button variant={"successSecondary"}>click</Button>
+          <Button variant={"purpleSecondary"}>click</Button>
+          <Button variant={"neutralSecondary"}>click</Button>
           <Icon
             icon="material-symbols-light:10k-sharp"
             width="24"
